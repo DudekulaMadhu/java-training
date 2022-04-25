@@ -2,9 +2,9 @@ import java.util.Scanner; //import
 
 public class userInput {
     public static void main(String[] args){
-        try (Scanner sc = new Scanner(System.in)) {
+        try (Scanner a = new Scanner(System.in)) {
             System.out.println("Enter a number");
-            int n = sc.nextInt(); // input
+            int n = a.nextInt(); // input
             System.out.println("You entered = " + n);
         }
     }
