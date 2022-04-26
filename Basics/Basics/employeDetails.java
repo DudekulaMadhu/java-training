@@ -42,7 +42,9 @@ public class employeDetails {
 }
 class Zensar{
     public static void main(String[] args){
-        employeDetails e = new employeDetails(67625, "Madhu", "Micro Services java", 20000);
+        employeDetails e = new employeDetails(1234, "Madhu", "Micro Services java", 20000);
+        employeDetails e1 = new employeDetails(6678, "Naveen", "Micro Services java", 20000);
         System.out.println(e);
+        System.out.println(e1);
     }
 }
