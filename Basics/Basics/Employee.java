@@ -1,5 +1,6 @@
 package Basics.Basics;
 
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Employee {
@@ -51,6 +52,7 @@ public class Employee {
 }
 class EmployeeSystem{
     static Scanner sc = new Scanner(System.in);
+    private static Scanner Docsc;
 
     private static Employee addEmployee(){
         System.out.println("Enter the Employee Name");
@@ -59,8 +61,13 @@ class EmployeeSystem{
         String eRole = sc.nextLine();
         System.out.println("Enter the Employee Salary");
         double eSalary = sc.nextDouble();
-        System.out.println("Enter the Employee DOB");
-        String dob = sc.nextLine();
+        System.out.println("Enter the Employee DOB (dd/mm/yy):");
+        String dob = Docsc.nextLine();
+        String d = dob.split("/")[0];
+        String m = dob.split("/")[1];
+        String y = dob.split("/")[2];
+
+        System.out.println(LocalTime.of(Integer.parseInt(y),Integer.parseInt(m),Integer.parseInt(d)));
         System.out.println("Enter the Employee Experience");
         double exp = sc.nextDouble();
 

@@ -17,7 +17,7 @@ public class StringExample {
         System.out.println(reverse(s));
     }
     public static String reverse(String s){
-        String str = "";
+        String str = " ";
         for(int i = s.length() - 1;i>0;i--){
             str += s.charAt(i);
         }
