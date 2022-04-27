@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class multiply {
     private static int multi;
-
     public static void main(String[] args){
         int i,num;
         try (Scanner sc = new Scanner(System.in)) {
