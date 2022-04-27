@@ -1,23 +1,52 @@
 package Basics.java_27th;
 
+import java.util.Scanner;
+
 public class StudentMarks {
-   public static void main(String[] args){
-       int[] arr = {89, 30, 50, 40, 34, 56,99, 57, 78, 67};
-       int greatest,lowest;
-       greatest = arr[0];
-       lowest = arr[0];
-       for(int i=0;i<arr.length;i++){
-           if(greatest<arr[i]){
-               greatest = arr[i];
-           }
-       }
-       for(int j=0;j<arr.length;j++){
-           int i;
-        if(lowest>arr[i]){
-               lowest = arr[i];
-           }
-       }
-       System.out.println("greatest =" + greatest);
-       System.out.println("lowest =" + lowest);
-   }  
+    public static double inputMarks() {
+            try (Scanner sc = new Scanner(System.in)) {
+                {
+                System.out.print("Enter your marks : ");
+                double marks = (double) sc.nextDouble();
+                // sc.close();
+                return marks;
+      }
+            }
+    }
+    public static void main(String[] args) {
+        double[] marks = new double[10];
+        for (int i = 0; i < 10; i++) {
+            marks[i] = inputMarks();
+        }
+
+        // Greatest Marks
+        double greatest = marks[0];
+        for (double m : marks) {
+            if(m > greatest) {
+                greatest = m;
+            }
+        }
+
+        // Lowest marks
+        double smallest = marks[0];
+        for (double m : marks) {
+            if(m < smallest) {
+                smallest = m;
+            }
+        }
+
+        // Average
+        // formula = sum of all elements/ no. of elements
+
+        int average = 0;
+
+        for (double d : marks) {
+            average += d;
+        }
+        average /= marks.length;
+
+        System.out.println("Greatest = " + greatest);
+        System.out.println("Smallest = " + smallest);
+        System.out.println("Average = " + average);
+    }
 }
