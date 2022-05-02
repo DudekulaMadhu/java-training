@@ -1,0 +1,21 @@
+package core_java;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+public class que {
+    public static void main(String[] args) {
+        Queue<Integer> q = new ArrayDeque<>();
+
+        q.offer(10);
+        q.offer(34);
+        q.offer(56);
+
+        q.poll();
+
+        System.out.println(q.isEmpty());
+
+        q.forEach(System.out::println);
+    }
+}
+
