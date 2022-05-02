@@ -20,7 +20,7 @@ public class listex {
        list.add(10);
        list.add(67);
        list.add(56);
-       list.add(-45);
+       list.add(-89);
 
        list.remove(2);
        list.add(2, 45);
