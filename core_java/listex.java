@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class listex {
-   public static List<Integer>convertIntoList(){
+public static List<Integer>convertIntoList(){
        int [] arr = {10, 15, 30, 56, 78};
        //ArrayList<Integer>[]> list = Array.asList(arr);
        List<Integer>list = new ArrayList<>();
@@ -21,7 +21,6 @@ public class listex {
        list.add(67);
        list.add(56);
        list.add(-89);
-
        list.remove(2);
        list.add(2, 45);
 
