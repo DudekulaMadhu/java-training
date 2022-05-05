@@ -13,13 +13,13 @@ public class Medicaltest {
         String id = UUID.randomUUID().toString();
         System.out.println("Enter name : ");
         String name = sc.nextLine();
-        System.out.println("enter age : ");
+        System.out.println("Enter age : ");
         int age = sc.nextInt();
-        System.out.println("Disease name : ");
-        String diseasename = sc.nextLine();
+        System.out.println("Enter disease : ");
+        String disease = sc.nextLine();
         System.out.println("Enter your phoneno : ");
         int phoneno = sc.nextInt();
-        Details d = new Details(id, name, age, diseasename, phoneno);
+        Details d = new Details(id, name, age, disease, phoneno);
 
         sc.close();
         return d;
@@ -32,7 +32,7 @@ public class Medicaltest {
             System.out.println("ID : " + e.getId());
             System.out.println("Name : " + e.getName());
             System.out.println("Age : " + e.getAge());
-            System.out.println("Disease : " + e.getDiseasename());
+            System.out.println("Disease : " + e.getDisease());
             System.out.println("phoneno : " + e.getPhoneno());
         });
     }
@@ -41,13 +41,13 @@ class Details{
     String id;
     String name;
     int age;
-    String diseasename;
+    String disease;
     int phoneno;
-    public Details(String id, String name, int age, String diseasename, int phoneno){
+    public Details(String id, String name, int age, String disease, int phoneno){
         this.id = id;
         this.name =name;
         this.age = age;
-        this.diseasename = diseasename;
+        this.disease = disease;
         this.phoneno =phoneno;
     }
     public String getId(){
@@ -68,11 +68,11 @@ class Details{
     public void setAge(int age){
         this.age = age;
     }
-    public String getDiseasename(){
-        return diseasename;
+    public String getDisease(){
+        return disease;
     }
-    public void setDiseasename(String diseasename){
-        this.diseasename = diseasename;
+    public void setDisease(String disease){
+        this.disease = disease;
     }
     public int getPhoneno(){
         return phoneno;
