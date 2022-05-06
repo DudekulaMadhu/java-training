@@ -71,6 +71,11 @@ public class medicalShop {
         return d;
     }
     public static void main(String[] args){
+        Details d1 = new Details("1","madhu",23,"fever",123456789);
+        Details d2 = new Details("2","nani",34,"cold",987654321);
+        System.out.println(d1);
+        System.out.println(d2);
+
          Details d = enterDetails();
          stack.add(d);
          stack.forEach(e ->{
@@ -78,7 +83,7 @@ public class medicalShop {
              System.out.println("Name :" + e.getName());
              System.out.println("Age: " + e.getAge());
              System.out.println("Disease: " + e.getDisease());
-             System.out.println("phoneno: " + e.getDisease());
+             System.out.println("phoneno: " + e.getPhoneno());
          });
     }
 }
