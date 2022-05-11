@@ -9,7 +9,7 @@ public class sortString {
         Arrays.sort(charArray);
         System.out.println(new String(charArray));
 
-        // another type
+        // another way
 
         String str = "honey";
         char[] arr = str.toCharArray();
