@@ -1,21 +1,27 @@
 package mayTest_11th;
 
-public class reverseString {
-    public static String reverse(String s) {
-        String str = "";
-        // length - 0
-        for (int i = s.length() - 1; i >= 0; i-=2) {
-            str += s.charAt(i);
-        }
 
-        /* for (int i = 0; i < str.length(); i++) {
-            if(i % 2 == 0) {
-                s = s.replace(s.charAt(i)+"", "");
-            }
-        } */
-        return str;
+public class reverseString {
+    public static void removeChar(String s, char c){
+        int j, count = 0, n = s.length();
+        char[] t = s.toCharArray();
+        for(int i = j = 0; i < n;i++){
+             if(t[i] != c)
+             t[j++] = t[i];
+             else
+                  count++;
+        }
+        while(count > 0){
+            t[j++] = '\0';
+            count--;
+        }
+        System.out.println(t);
     }
-    public static void main(String[] args) {
-        System.out.println(reverse("Madhu"));
-    }
+    public static void main(String[] args){
+         String s = "String reverse";
+         removeChar(s, 'e');
+        
+        }   
 }
+
+
