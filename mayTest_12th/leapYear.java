@@ -1,18 +1,18 @@
 package mayTest_12th;
 
+import java.time.Year;
 
 public class leapYear {
+    public static boolean isLeapYear(int year){
+        return Year.isLeap(year);
+    }
     public static void main(String[] aegs){
-        int year = 2022;
-        int n = 7;
-        int count = 0;
-        while(count != n){
-            year = year + 1;
-           if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)){
-            count++; 
-            System.out.println(year);       
-           }
-
+        final int startyear = 2022;
+        final int endyear = startyear + 50;
+        for(int i = startyear; i < endyear; i++){
+            if(isLeapYear(i)){
+                System.out.println(i);
+            }
         }
     }
 }
