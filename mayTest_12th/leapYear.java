@@ -4,7 +4,7 @@ package mayTest_12th;
 public class leapYear {
     public static void main(String[] aegs){
         int year = 2022;
-        int n = 50;
+        int n = 7;
         int count = 0;
         while(count != n){
             year = year + 1;
