@@ -30,8 +30,8 @@ public class MaximumToys {
             for(int i=0;i<n;i++)
             prices[i]=sc.nextInt();
             int money=sc.nextInt();
-            
-            System.out.println(getMaxToys(prices,money));
+
+            System.out.println("the no of toys -" + getMaxToys(prices,money));
         }
     }
 }
